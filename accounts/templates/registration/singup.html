@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+ <div class="container ">
+            <div class class="row">
+              <div class="col-lg-10">
+            <div class="card mb-3 mt-5   btn-light" >
+                <div class="row no-gutters">
+
+
+                    <div class="card-body  ">
+                        <h4 class="card-title text-center text-info"> Regestration</h4>
+                        <h5 class="card-text text-center text-danger "> Fill out this form with your information </h5>
+
+
+
+                   <form method="post" action="">
+
+                  {% csrf_token %}
+
+                        <div class="form-row ">
+
+                       <div class="form-group col-md-6">
+                                <label for="inputEmail4">user Name</label>
+                                {{ form.username}}
+                              </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">First Name</label>
+                                {{ form.first_name }}
+                              </div>
+
+                              <div class="form-group col-md-6">
+                                <label for="inputEmail4">Last Name</label>
+                               {{ form.last_name }}
+                              </div>
+
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            {{ form.email }}
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                           {{ form.password1 }}
+                          </div>
+
+
+                       <div class="form-group col-md-6">
+                            <label for="inputPassword4"> Confirm Password</label>
+                           {{ form.password2 }}
+                          </div>
+
+
+                        <button type="submit" class="btn btn-info">Sign in</button>
+                            </div>
+                      </form>
+
+
+                   </div>
+               </div>
+            </div>
+
+              </div></div></div>
+
+{% endblock %}

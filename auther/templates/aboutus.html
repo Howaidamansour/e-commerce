@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+
+   <div class="card text-center m-auto  ">
+
+                    <img class="card-img-top" src="{% static 'site_static/img/m34.jpg' %}" alt="Card image cap">
+                    <div class="card-header ">
+                     About
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title text-info">manually </h5>
+                      <p class="card-text">   We made the platform to present
+                        All handicraft services
+                        As designers and manufacturers of handmade products suffer from competitive prices compared to ready-made markets, even though they take longer time to manufacture and design.
+                        They suffer from the lack of raw materials needed for the industry
+
+                        We created this platform to help hand-made makers in finding raw materials and to facilitate them to market their products at reasonable prices.
+
+                        It helps the consumer to get the best product </p>
+                      <a href="{% url 'product:product_list' %}" class="btn btn-info">Back</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                      2 days ago
+                    </div>
+                  </div>
+
+
+
+
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+{% endblock %}
